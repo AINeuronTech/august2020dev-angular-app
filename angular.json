@@ -119,6 +119,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "august2020-angular-demo"
+    }
+  },
+  "defaultProject": "august2020-angular-demo",
+  "cli": {
+    "analytics": false
+  }
 }
