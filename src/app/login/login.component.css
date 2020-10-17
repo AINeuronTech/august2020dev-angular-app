@@ -1,5 +1,5 @@
-button{
-  background-color:darkgrey;
+.button{
+  background-color: darkgray;
   border: none;
   color: white;
   padding: 15px 32px;
@@ -10,11 +10,13 @@ button{
   margin: 4px 2px;
   cursor: pointer;
   float: right;
-
 } .b1{
-   background-color: lightseagreen;
-   border:yellow;
- }.b2{
-    background-color: -moz-default-color;
-    border:purple;
-  }
+  background-color: lightseagreen;
+  border: yellow;
+  }.b2{
+  background-color: grey;
+  border: purple;
+ }.b3{
+         background-color: grey;
+         border: purple;
+ }

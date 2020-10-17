@@ -1,4 +1,4 @@
-ul {
+ul{
   list-style-type: none;
   margin-left: 0;
   margin-right: auto;
@@ -7,18 +7,24 @@ ul {
   background-color: blueviolet;
 }
 
-li {
+li{
   float: left;
 }
 
-li a {
+li a{
   display: block;
   color: white;
   text-align: center;
   padding: 14px 16px;
   text-decoration: none;
 }
+ li a:hover{
+   background-color: green;
+ }
 
-li a:hover {
-  background-color: green;
-}
+ /*body{*/
+ /*  height: 800px;*/
+ /*  background-color: grey;*/
+ /*  background-image: url('../assets/images/tree.jpg');*/
+ /*  background-size: cover;*/
+ /*}*/

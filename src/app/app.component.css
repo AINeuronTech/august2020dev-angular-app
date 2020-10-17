@@ -1,9 +1,7 @@
-
-.center {
-  text-align: center;
-  color: blue;
+body{
+  height: 900px;
+  background-color: grey;
+  background-image: url('./assets/images/tree.jpg');
+  background-size: cover;
 }
 
-/*body{*/
-/*  background-color: brown;*/
-/*}*/
