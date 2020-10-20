@@ -1,0 +1,15 @@
+<h3>You selected product with id = {{productId}}</h3>
+<p>
+  <button (click)="showOverview()">Overview</button>
+  <button (click)="showPrice()">Price</button>
+</p>
+
+<router-outlet></router-outlet>
+<p>
+  <button (click)="goPrevious()">Previous</button>
+  <button (click)="goNext()">Next</button>
+</p>
+
+<div>
+  <button (click)="gotoProducts()">Back</button>
+</div>
