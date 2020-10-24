@@ -12,7 +12,8 @@ export class ProductDetailComponent implements OnInit {
   constructor(private route: ActivatedRoute, private router: Router) {}
 
   ngOnInit(): void {
-    // let id = parseInt(this.route.snapshot.paramMap.get('id'));
+     //let id = parseInt(this.route.snapshot.paramMap.get('id'));
+     //this.productId = id;
     this.route.paramMap.subscribe((params: ParamMap) => {
       let id = parseInt(params.get('id'));
       this.productId = id;
@@ -31,7 +32,7 @@ export class ProductDetailComponent implements OnInit {
 
   gotoProducts(): void {
     let selectedId = this.productId ? this.productId : null;
-    //this.router.navigate(['/departments', {id: selectedId}]);
+    //this.router.navigate(['/products', {id: selectedId}]);
     this.router.navigate(['../', {id: selectedId}], {relativeTo: this.route});
   }
 

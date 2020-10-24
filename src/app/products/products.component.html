@@ -1,8 +1,0 @@
-<h3>
-  Product List
-</h3>
-<ul class="items">
-  <li *ngFor="let product of products" [class.selected]="isSelected(product)" (click)="onSelect(product)">
-    <span class="badge">{{product.id}}</span> {{product.name}}
-  </li>
-</ul>

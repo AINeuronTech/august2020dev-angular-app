@@ -14,7 +14,9 @@ export class ProductListComponent implements OnInit {
     {"id": 2, "name": "Laptop"},
     {"id": 3, "name": "TV"},
     {"id": 4, "name": "Table"},
-    {"id": 5, "name": "Monitor"}
+    {"id": 5, "name": "Monitor"},
+    {"id": 6, "name": "Car"},
+    {"id": 7, "name": "RAM"}
   ]
   constructor(private router: Router, private route: ActivatedRoute) { }
 
@@ -27,11 +29,11 @@ export class ProductListComponent implements OnInit {
   }
 
   onSelect(product): void {
-    //this.router.navigate(['/departments', department.id]);
+    //this.router.navigate(['/products', product.id]);
     this.router.navigate([product.id], { relativeTo: this.route });
   }
 
-  isSelected(department) { return department.id === this.selectedId; }
+  isSelected(product) { return product.id === this.selectedId; }
 
 }
 

@@ -1,5 +1,11 @@
 <p> iPhone is an Apple Product </p>
-<p> Laptop are available from different brands </p>
-<p> TV is made from Samsung </p>
-<p> Table is for reading</p>
-<p> Monitor is from ASUS </p>
+<!--<p> Laptop are available from different brands </p>-->
+<!--<p> TV is made from Samsung </p>-->
+<!--<p> Table is for reading</p>-->
+<!--<p> Monitor is from ASUS </p>-->
+
+<ul class="items">
+  <li *ngFor="let product of products">
+    <span class="badge">{{product.id}}</span> {{product.description}}
+  </li>
+</ul>
