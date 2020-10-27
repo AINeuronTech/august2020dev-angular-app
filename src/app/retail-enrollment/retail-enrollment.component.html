@@ -1,23 +1,26 @@
 <div class="container-fluid">
   <h2> SignUp Form</h2>
-  <form [formGroup]="signUpForm" (ngSubmit)="onSubmit(signUpForm)">
+  <form [formGroup]="retailEnrollmentForm" (ngSubmit)="onSubmit(retailEnrollmentForm)">
     <div class="form-group">
       <label>UserName or Email</label>
-      <input type="text" formControlName="userName" class="form-control" required>
+      <input type="text" formControlName="userName" class="form-control">
     </div>
-
     <div class="form-group">
-      <label>Phone Number</label>
-      <input type="text" formControlName="phoneNumber" class="form-control">
+      <label>CompanyName</label>
+      <input type="text" formControlName="companyName" class="form-control">
+    </div>
+    <div class="form-group">
+      <label>PhoneNumber</label>
+      <input type="text" formControlName="companyPhoneNumber" class="form-control">
     </div>
 
     <div class="form-group">
       <label>Password</label>
-      <input type="text" formControlName="password" type="password" class="form-control">
+      <input type="text" formControlName="password" class="form-control">
     </div>
-   <div formGroupName="address">
+    <div formGroupName="corporateAddress">
       <div class="form-group">
-        <label>Street Address</label>
+        <label>StreetAddress</label>
         <input type="text" formControlName="streetAddress" class="form-control">
       </div>
       <div class="form-group">
@@ -29,18 +32,15 @@
         <label>State</label>
         <input type="text" formControlName="state" class="form-control">
       </div>
-     <div class="form-group">
-       <label>PostalCode</label>
-       <input type="text" formControlName="postalCode" class="form-control">
-     </div>
       <div class="form-group">
         <label>Country</label>
         <input type="text" formControlName="country" class="form-control">
       </div>
-   </div>
-    <button class="btn btn-primary" type="submit">SignUp</button>
+    </div>
+    <button class="btn btn-primary" type="submit">Enroll</button>
   </form>
 
-    {{signUpForm.value | json | lowercase}}
+  {{retailEnrollmentForm.value | json | lowercase}}
 </div>
+
 

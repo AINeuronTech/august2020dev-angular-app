@@ -27,3 +27,8 @@ body{
   background-image: url('../assets/images/tree.jpg');
   background-size: cover;
 }
+
+html {
+  height: 800px;
+  background-color: floralwhite;
+}
