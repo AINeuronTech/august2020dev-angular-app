@@ -8,11 +8,12 @@ import {FormsModule} from '@angular/forms';
 })
 export class LoginComponent  {
   roles = ['Yearly Member','Admin','Retailer'];
-
+  logInForm = new FormsModule();
   constructor() { }
 
   onSubmit(logInForm){
-    console.log(logInForm);
+
+    console.log(this.logInForm = logInForm);
   }
 
 }
