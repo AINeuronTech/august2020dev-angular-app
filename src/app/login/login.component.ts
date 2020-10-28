@@ -11,8 +11,8 @@ export class LoginComponent  {
 
   constructor() { }
 
-  onSubmit(){
-    console.log();
+  onSubmit(logInForm){
+    console.log(logInForm);
   }
 
 }

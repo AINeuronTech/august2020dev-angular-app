@@ -8,7 +8,6 @@ import {FormBuilder} from '@angular/forms';
 })
 export class RetailEnrollmentComponent implements OnInit {
 
-
   constructor(private fb: FormBuilder) { }
 
   retailEnrollmentForm = this.fb.group({
@@ -20,16 +19,18 @@ export class RetailEnrollmentComponent implements OnInit {
       streetAddress: [''],
       city: [''],
       state: [''],
-      country: ['']
+      postalCode:[''],
+      country:['']
     })
   });
+
 
   ngOnInit(): void {
 
   }
 
   onSubmit(retailEnrollmentForm){
-
+    console.log(this.retailEnrollmentForm.value)
   }
 
 }

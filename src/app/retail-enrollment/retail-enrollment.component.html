@@ -1,46 +1,55 @@
 <div class="container-fluid">
-  <h2> SignUp Form</h2>
+  <h2>SignUp Form with Reactive Approach</h2>
   <form [formGroup]="retailEnrollmentForm" (ngSubmit)="onSubmit(retailEnrollmentForm)">
+
     <div class="form-group">
       <label>UserName or Email</label>
-      <input type="text" formControlName="userName" class="form-control">
+      <input type="text" formControlName="userName" class="class-control">
     </div>
+
     <div class="form-group">
       <label>CompanyName</label>
-      <input type="text" formControlName="companyName" class="form-control">
+      <input type="text" formControlName="companyName" class="class-control">
     </div>
+
     <div class="form-group">
-      <label>PhoneNumber</label>
-      <input type="text" formControlName="companyPhoneNumber" class="form-control">
+      <label>CompanyPhoneNumber</label>
+      <input type="text" formControlName="companyPhoneNumber" class="class-control">
     </div>
 
     <div class="form-group">
       <label>Password</label>
-      <input type="text" formControlName="password" class="form-control">
+      <input type="password" formControlName="password" class="class-control">
     </div>
+
     <div formGroupName="corporateAddress">
       <div class="form-group">
         <label>StreetAddress</label>
-        <input type="text" formControlName="streetAddress" class="form-control">
+        <input type="text" formControlName="streetAddress" class="class-control">
       </div>
       <div class="form-group">
         <label>City</label>
-        <input type="text" formControlName="city" class="form-control">
+        <input type="text" formControlName="city" class="class-control" placeholder="corporate city location">
       </div>
-
       <div class="form-group">
         <label>State</label>
-        <input type="text" formControlName="state" class="form-control">
+        <input type="text" formControlName="state" class="class-control">
+      </div>
+      <div class="form-group">
+        <label>PostalCode</label>
+        <input type="text" formControlName="postalCode" class="class-control">
       </div>
       <div class="form-group">
         <label>Country</label>
-        <input type="text" formControlName="country" class="form-control">
+        <input type="text" formControlName="country" class="class-control">
       </div>
     </div>
-    <button class="btn btn-primary" type="submit">Enroll</button>
+
+    <button class="btn btn-primary" type="submit">RetailEnrollmentSubmit</button>
+
   </form>
 
-  {{retailEnrollmentForm.value | json | lowercase}}
-</div>
+<!--  {{retailEnrollmentForm.value | json}}-->
 
+</div>
 
