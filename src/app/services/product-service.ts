@@ -7,23 +7,20 @@ import {Router} from '@angular/router';
 @Injectable({
   providedIn: 'root'
 })
-export class AuthenticationService{
-  signupUrl:string = "http://localhost:5000/api/signUp";
-  loginUrl:string = "http://localhost:5000/api/login";
+export class ProductService {
+  productUrl: string = "http://localhost:5000/api/product";
   private headers: Headers;
-  constructor(private http: HttpClient){
+
+
+  constructor(private http: HttpClient) {
     this.headers = new Headers();
     this.headers.append('Content-Type', 'application/json');
     this.headers.append('Accept', 'application/json');
 
   }
 
-  createProfile(user:User):Observable<Object>{
-    return this.http.post(this.signupUrl, user);
+  createProduct(){
+    this.http.post().subscribe()
   }
-
-  profileLogin(user:User):Observable<Object>{
-      return this.http.post(this.loginUrl, user);
-    }
 
 }

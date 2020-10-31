@@ -1,5 +1,8 @@
 import { Component } from '@angular/core';
-import {FormsModule} from '@angular/forms';
+import {FormControl, FormGroup, FormsModule} from '@angular/forms';
+import {User} from '../user';
+import {AuthenticationService} from '../services/authentication-services';
+import {Router} from '@angular/router';
 
 @Component({
   selector: 'app-login',
@@ -7,13 +10,28 @@ import {FormsModule} from '@angular/forms';
   styleUrls: ['./login.component.css']
 })
 export class LoginComponent  {
-  roles = ['Yearly Member','Admin','Retailer'];
-  logInForm = new FormsModule();
-  constructor() { }
 
-  onSubmit(logInForm){
+  loginForm = new FormGroup({
+    userName: new FormControl(''),
+    password: new FormControl(''),
 
-    console.log(this.logInForm = logInForm);
+  });
+
+  user: User = new User();
+  constructor(private authenticationService: AuthenticationService, private router: Router) { }
+
+  onSubmit(){
+    console.log(this.user)
+    this.authenticationService.profileLogin(this.loginForm.value).subscribe( data =>{
+        console.log('Profile Found');
+        this.goToProductList();
+    },
+      error => console.log('Profile not Found Error', error)
+    );
+  }
+
+  goToProductList(){
+    this.router.navigate(['/products'])
   }
 
 }

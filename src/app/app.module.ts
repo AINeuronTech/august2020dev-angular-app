@@ -14,11 +14,12 @@ import { ProductOverviewComponent } from './product-overview/product-overview.co
 import { ProductPriceComponent } from './product-price/product-price.component';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import { RetailEnrollmentComponent } from './retail-enrollment/retail-enrollment.component';
+import {HttpClientModule} from '@angular/common/http';
 
 
 @NgModule({
   declarations: [AppComponent, LoginComponent, SignupComponent, NavbarComponent, FooterComponent, ProductDetailComponent, ProductListComponent, PageNotFoundComponent, ProductOverviewComponent, ProductPriceComponent, RetailEnrollmentComponent],
-  imports: [BrowserModule, AppRoutingModule, ReactiveFormsModule, FormsModule],
+  imports: [BrowserModule, AppRoutingModule, ReactiveFormsModule, FormsModule,HttpClientModule],
   providers: [],
   bootstrap: [AppComponent]
 })
